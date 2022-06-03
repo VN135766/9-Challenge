@@ -17,25 +17,74 @@ const questions = [
                 console.log('Please enter title to continue');
                 return false;
             }
-        }
-    },
-{
+        }},
+    {
         type: 'input',
         name: 'description',
-        message: 'Please provide a description of your project',
+        message: 'Please provide description of your project',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
             } else {
-                console.log('Please enter a project description');
+                console.log('Please enter a description to continue');
                 return false;
             }
-        }
-    }];
+        }},
+
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'How do you install your project?',
+            validate: InstallInput => {
+                if (InstallInput) {
+                    return true;
+                } else {
+                    console.log('Please enter installations steps to continue');
+                    return false;
+                }
+            }},
+
+            {
+                type: 'input',
+                name: 'usage',
+                message: 'How do you use your project?',
+                validate: useageInput => {
+                    if (useageInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter how to use your project');
+                        return false;
+                    }
+                }},
+                {
+                    type: 'input',
+                    name: 'contribution',
+                    message: 'How can users contribute to this project?',
+                    validate: contributeInput => {
+                        if (contributeInput) {
+                            return true;
+                        } else {
+                            console.log('Please provide how users can contribute');
+                            return false;
+                        }
+                    }},
+                    {
+                        type: 'input',
+                        name: 'test',
+                        message: 'How can the user test this project?',
+                        validate: testInput => {
+                            if (testInput) {
+                                return true;
+                            } else {
+                                console.log('Please explain how to test your project?');
+                                return false;
+                            }
+                        }}]
+
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { 
-    fs.writeFile(fileName, data, (err ) => {
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
         if (err) {
             return console.log(err)
         }
