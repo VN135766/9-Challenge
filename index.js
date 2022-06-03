@@ -17,7 +17,8 @@ const questions = [
                 console.log('Please enter title to continue');
                 return false;
             }
-        }},
+        }
+    },
     {
         type: 'input',
         name: 'description',
@@ -29,57 +30,88 @@ const questions = [
                 console.log('Please enter a description to continue');
                 return false;
             }
-        }},
+        }
+    },
 
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'How do you install your project?',
-            validate: InstallInput => {
-                if (InstallInput) {
-                    return true;
-                } else {
-                    console.log('Please enter installations steps to continue');
-                    return false;
-                }
-            }},
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How do you install your project?',
+        validate: InstallInput => {
+            if (InstallInput) {
+                return true;
+            } else {
+                console.log('Please enter installations steps to continue');
+                return false;
+            }
+        }
+    },
 
-            {
-                type: 'input',
-                name: 'usage',
-                message: 'How do you use your project?',
-                validate: useageInput => {
-                    if (useageInput) {
-                        return true;
-                    } else {
-                        console.log('Please enter how to use your project');
-                        return false;
-                    }
-                }},
-                {
-                    type: 'input',
-                    name: 'contribution',
-                    message: 'How can users contribute to this project?',
-                    validate: contributeInput => {
-                        if (contributeInput) {
-                            return true;
-                        } else {
-                            console.log('Please provide how users can contribute');
-                            return false;
-                        }
-                    }},
-                    {
-                        type: 'input',
-                        name: 'test',
-                        message: 'How can the user test this project?',
-                        validate: testInput => {
-                            if (testInput) {
-                                return true;
-                            } else {
-                                console.log('Please explain how to test your project?');
-                                return false;
-                            }
-                        }}]
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'How do you use your project?',
+        validate: useageInput => {
+            if (useageInput) {
+                return true;
+            } else {
+                console.log('Please enter how to use your project');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'How can users contribute to this project?',
+        validate: contributeInput => {
+            if (contributeInput) {
+                return true;
+            } else {
+                console.log('Please provide how users can contribute');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'How can the user test this project?',
+        validate: testInput => {
+            if (testInput) {
+                return true;
+            } else {
+                console.log('Please explain how to test your project?');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email so a user can ask questions about your project',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter a valid email');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Please enter a GitHub username',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub user name');
+                return false;
+            }
+        }
+    }]
 
 
 // TODO: Create a function to write README file
