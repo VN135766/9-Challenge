@@ -111,6 +111,12 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Please enter license used for project',
+        choices: ['MIT', 'CDDL', 'Apache', 'None']
     }]
 
 
